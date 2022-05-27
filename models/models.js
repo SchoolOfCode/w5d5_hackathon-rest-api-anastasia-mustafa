@@ -20,3 +20,9 @@ export async function getMoviesById(id) {
 export async function createMovie(movie) {
     const newMovie = await query(`INSERT INTO movies (title, year, runtime, genres) VALUES ($1 , $2, $3, ARRAY[$4] ) RETURNING *;`, [movie.title, movie.year, movie.runtime, movie.genres]) 
     return newMovie.rows; }
+
+//Update a movie by Id 
+export async function updateMovieTitle(movieTitle, id) {
+    const updatedMovie = await query(`UPDATE movies SET title = ($1) WHERE id = ($2) RETURNING *;`,[movieTitle.title, id])
+    return updatedMovie.rows;
+}
