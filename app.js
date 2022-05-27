@@ -12,7 +12,7 @@ app.get("/", function (req, res) {
 });
 app.use(express.json());
 
-app.use("/movies", moviesRouter());
+app.use("/movies", moviesRouter);
 
 app.listen(PORT, function () {
   console.log(`Server is running on port ${PORT}`);
