@@ -12,9 +12,17 @@ app.get("/", function (req, res) {
 });
 app.use(express.json());
 
+//Middleware functions
+
 app.use("/movies", moviesRouter);
 
 app.use("/movies/<movie_id>", moviesRouter);
+
+//Connecting API to Frontend 
+
+app.get("/", function (req, res) {
+  res.sendFile(html);
+});
 
 app.listen(PORT, function () {
   console.log(`Server is running on port ${PORT}`);

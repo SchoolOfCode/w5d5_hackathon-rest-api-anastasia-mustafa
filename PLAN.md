@@ -15,6 +15,8 @@
 14. POST request movie(Create a function to create a new movie and add to the database)✅
 15. PUT request to update the movie by ID✅
 16. DELETE request to delete a movie a by ID✅
+17. Make a route handler to connect API to HTML file ✅
+18. Create "public" and "view" folder to store HTML and CSS file 
 
 
 STRETCH GOALS
