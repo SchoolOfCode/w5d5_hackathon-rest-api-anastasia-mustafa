@@ -11,38 +11,41 @@ moviesRouter.get("/", async function (req, res) {
     payload: result,
   });
 });
-//Get Movie by Id 
+//Get Movie by Id
 
 import { getMoviesById } from "../models/models.js";
 
-moviesRouter.get("/:id", async function(req, res) {
+moviesRouter.get("/:id", async function (req, res) {
   const id = Number(req.params.id);
-  const movie = await getMoviesById(id)
-  res.json({ success: true, payload: movie})
-})
+  const movie = await getMoviesById(id);
+  res.json({ success: true, payload: movie });
+});
 
-//Post request - Create a new movie 
+//Post request - Create a new movie
 
 import { createMovie } from "../models/models.js";
 
 moviesRouter.post("/", async function (req, res) {
   const newMovie = req.body;
-  const result = await createMovie (newMovie);
-  res.json({success: true, payload: result});
+  const result = await createMovie(newMovie);
+  res.json({ success: true, payload: result });
+});
 
-})
-
-//Put request - Update an existing movie 
-import { updateMovieTitle} from "../models/models.js"
+//Put request - Update an existing movie
+import { updateMovieTitle } from "../models/models.js";
 
 moviesRouter.put("/:id", async function (req, res) {
   const id = Number(req.params.id);
   const update = req.body;
-  const updatedMovie = await updateMovieTitle(update, id)
-  res.json({success: true, payload: updatedMovie})
-})
+  const updatedMovie = await updateMovieTitle(update, id);
+  res.json({ success: true, payload: updatedMovie });
+});
 
-//Delete a movie 
-
-export {moviesRouter};
-
+//Delete a movie
+import { deleteMovieById } from "../models/models.js";
+moviesRouter.delete("/:id", async function (req, res) {
+  const id = Number(req.params.id);
+  const deletedMovie = await deleteMovieById(id);
+  res.json({ success: true, payload: deletedMovie });
+});
+export { moviesRouter };

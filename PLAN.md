@@ -13,8 +13,8 @@
   - Make a router in the router folder✅
   - Make a getMovieByID function and import it into the router file✅
 14. POST request movie(Create a function to create a new movie and add to the database)✅
-15. PUT request to update the movie by ID
-16. DELETE request to delete a movie a by ID
+15. PUT request to update the movie by ID✅
+16. DELETE request to delete a movie a by ID✅
 
 
 STRETCH GOALS
