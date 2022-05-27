@@ -15,7 +15,7 @@ moviesRouter.get("/", async function (req, res) {
 
 import { getMoviesById } from "../models/models.js";
 
-moviesRouter.get(":/id", async function(req, res) {
+moviesRouter.get("/:id", async function(req, res) {
   const id = Number(req.params.id);
   const movie = await getMoviesById(id)
   res.json({ success: true, payload: movie})
@@ -28,7 +28,7 @@ import { createMovie } from "../models/models.js";
 moviesRouter.post("/", async function (req, res) {
   const newMovie = req.body;
   const result = await createMovie (newMovie);
-  res.json({success: true, payload: newMovie});
+  res.json({success: true, payload: result});
 
 })
 

@@ -7,10 +7,18 @@
 8. Create a table in the database.(.db/scripts) ✅
 9. Populate the movies table in the data base ✅
 10. Create database scripts in the package.json preloading the dotenv config✅
-11. Start on the route handlers GET request
-12. Create a compatible model function to import into the GET request
+11. Start on the route handlers GET request✅
+12. Create a compatible model function to import into the GET request✅
+13. GET Movie by ID Get request with a compatible function✅
+  - Make a router in the router folder✅
+  - Make a getMovieByID function and import it into the router file✅
+14. POST request movie(Create a function to create a new movie and add to the database)✅
+15. PUT request to update the movie by ID
+16. DELETE request to delete a movie a by ID
 
 
 STRETCH GOALS
 1. Find out why the array of genres is inserted into the table as an object
 2. Fetch the data from an external API and use in out database.
+3. Search movie by Title and Year
+4. Add the search by Title and year into the GET router.
